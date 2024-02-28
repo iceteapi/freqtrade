@@ -1,0 +1,119 @@
+D:\workspace\zen\freqtrade>python ./freqtrade/main.py backtesting -c ./config_examples/config_binance.example.json --strategy ecV1 --timerange=20231101-20240203 --br
+eakdown day week month --enable-protections --cache none
+2024-02-07 06:54:40,544 - freqtrade - INFO - freqtrade 2024.2-dev-35e1421d5
+2024-02-07 06:54:40,546 - freqtrade.configuration.load_config - INFO - Using config: ./config_examples/config_binance.example.json ...
+2024-02-07 06:54:40,547 - freqtrade.loggers - INFO - Verbosity set to 0
+2024-02-07 06:54:40,547 - freqtrade.configuration.configuration - INFO - Parameter --enable-protections detected, enabling Protections. ...
+2024-02-07 06:54:40,547 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 3 ...
+2024-02-07 06:54:40,547 - freqtrade.configuration.configuration - INFO - Parameter --timerange detected: 20231101-20240203 ...
+2024-02-07 06:54:40,548 - freqtrade.configuration.configuration - INFO - Using user-data directory: D:\workspace\zen\freqtrade\user_data ...
+2024-02-07 06:54:40,548 - freqtrade.configuration.configuration - INFO - Using data directory: D:\workspace\zen\freqtrade\user_data\data\binance ...
+2024-02-07 06:54:40,548 - freqtrade.configuration.configuration - INFO - Parameter --breakdown detected ...
+2024-02-07 06:54:40,548 - freqtrade.configuration.configuration - INFO - Parameter --cache=none detected ...
+2024-02-07 06:54:40,548 - freqtrade.configuration.configuration - INFO - Filter trades by timerange: 20231101-20240203
+2024-02-07 06:54:40,549 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2024-02-07 06:54:40,554 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2024-02-07 06:54:40,554 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2024-02-07 06:54:40,554 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2024-02-07 06:54:40,556 - freqtrade.commands.optimize_commands - INFO - Starting freqtrade in Backtesting mode
+2024-02-07 06:54:40,556 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2024-02-07 06:54:40,557 - freqtrade.exchange.exchange - INFO - Using CCXT 4.2.25
+2024-02-07 06:54:40,557 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'options': {'defaultType': 'future'}, 'httpsProxy': 'http://127.0.0.
+1:62078', 'enableRateLimit': True}
+2024-02-07 06:54:40,562 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'options': {'defaultType': 'future'}, 'httpsProxy': 'http://127.0.0.
+1:62078', 'enableRateLimit': True, 'rateLimit': 40}
+2024-02-07 06:54:40,568 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2024-02-07 06:54:42,988 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange 'Binance'...
+2024-02-07 06:54:43,149 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy ecV1 from 'D:\workspace\zen\freqtrade\user_data\strategies\ecV1.py'...
+2024-02-07 06:54:43,150 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+2024-02-07 06:54:43,150 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value in config file: 5m.
+2024-02-07 06:54:43,150 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value in config file: USDT.
+2024-02-07 06:54:43,150 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value in config file: 0.05.
+2024-02-07 06:54:43,151 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value in config file: {'entry': 10, 'exit': 10, 'ex
+it_timeout_count': 0, 'unit': 'minutes'}.
+2024-02-07 06:54:43,151 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'use_exit_signal' with value in config file: True.
+2024-02-07 06:54:43,151 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value in config file: 3.
+2024-02-07 06:54:43,151 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {'360': -1, '164': 0, '90': 0.015, '60': 0.03, '30': 0.1, '0': 0
+.2}
+2024-02-07 06:54:43,151 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 5m
+2024-02-07 06:54:43,151 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.1
+2024-02-07 06:54:43,151 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: True
+2024-02-07 06:54:43,151 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive: 0.01
+2024-02-07 06:54:43,151 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.05
+2024-02-07 06:54:43,152 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: True
+2024-02-07 06:54:43,152 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+2024-02-07 06:54:43,152 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+2024-02-07 06:54:43,152 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'limit', 'stoploss': 'limit', 'stoplo
+ss_on_exchange': False, 'stoploss_on_exchange_interval': 60}
+2024-02-07 06:54:43,152 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+2024-02-07 06:54:43,152 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2024-02-07 06:54:43,152 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 0.05
+2024-02-07 06:54:43,152 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using protections: []
+2024-02-07 06:54:43,152 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 100
+2024-02-07 06:54:43,152 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'exit_timeout_count': 0, 'unit': '
+minutes'}
+2024-02-07 06:54:43,152 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+2024-02-07 06:54:43,152 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+2024-02-07 06:54:43,153 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+2024-02-07 06:54:43,153 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.01
+2024-02-07 06:54:43,153 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2024-02-07 06:54:43,153 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2024-02-07 06:54:43,153 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+2024-02-07 06:54:43,153 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2024-02-07 06:54:43,153 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 3
+2024-02-07 06:54:43,153 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2024-02-07 06:54:43,165 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from 'D:\workspace\zen\freqtrade\freqtrade\plugins\pairlist\S
+taticPairList.py'...
+2024-02-07 06:54:43,173 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist ShuffleFilter from 'D:\workspace\zen\freqtrade\freqtrade\plugins\pairlist\Sh
+uffleFilter.py'...
+2024-02-07 06:54:43,173 - ShuffleFilter - INFO - Backtesting mode detected, applying seed value: 42
+2024-02-07 06:54:43,183 - freqtrade.data.history.history_utils - INFO - Using indicator startup period: 100 ...
+2024-02-07 06:54:43,200 - freqtrade.data.history.idatahandler - WARNING - SUI/USDT:USDT, futures, 5m, data starts at 2023-11-09 00:00:00
+2024-02-07 06:54:43,224 - freqtrade.data.history.idatahandler - WARNING - ARB/USDT:USDT, futures, 5m, data starts at 2023-11-09 00:00:00
+2024-02-07 06:54:43,248 - freqtrade.data.history.idatahandler - WARNING - INJ/USDT:USDT, futures, 5m, data starts at 2023-11-09 00:00:00
+2024-02-07 06:54:43,270 - freqtrade.data.history.idatahandler - WARNING - UMA/USDT:USDT, futures, 5m, data starts at 2023-11-09 00:00:00
+2024-02-07 06:54:43,292 - freqtrade.data.history.idatahandler - WARNING - CFX/USDT:USDT, futures, 5m, data starts at 2023-11-09 00:00:00
+2024-02-07 06:54:43,315 - freqtrade.data.history.idatahandler - WARNING - API3/USDT:USDT, futures, 5m, data starts at 2023-11-09 00:00:00
+2024-02-07 06:54:43,336 - freqtrade.data.history.idatahandler - WARNING - NEO/USDT:USDT, futures, 5m, data starts at 2023-11-09 00:00:00
+2024-02-07 06:54:43,352 - freqtrade.optimize.backtesting - INFO - Loading data from 2023-11-09 00:00:00 up to 2024-02-03 00:00:00 (86 days).
+2024-02-07 06:54:43,352 - freqtrade.configuration.timerange - WARNING - Moving start-date by 100 candles to account for startup time.
+2024-02-07 06:54:43,497 - freqtrade.optimize.backtesting - INFO - Dataload complete. Calculating indicators
+2024-02-07 06:54:43,497 - freqtrade.optimize.backtesting - INFO - Running backtesting for Strategy ecV1
+2024-02-07 06:54:43,498 - freqtrade.strategy.hyper - INFO - No params for buy found, using default values.
+2024-02-07 06:54:43,498 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_umacd_max = -0.01176
+2024-02-07 06:54:43,498 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_umacd_min = -0.01416
+2024-02-07 06:54:43,498 - freqtrade.strategy.hyper - INFO - No params for sell found, using default values.
+2024-02-07 06:54:43,498 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_umacd_max = -0.02323
+2024-02-07 06:54:43,498 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_umacd_min = -0.00707
+2024-02-07 06:54:43,499 - freqtrade.strategy.hyper - INFO - No params for protection found, using default values.
+2024-02-07 06:54:43,499 - freqtrade.data.dataprovider - INFO - Loading data for SUI/USDT:USDT 1h from 2023-10-27 20:00:00 to 2024-02-03 00:00:00
+2024-02-07 06:54:43,504 - freqtrade.data.history.idatahandler - WARNING - SUI/USDT:USDT, futures, 1h, data starts at 2023-11-09 00:00:00
+2024-02-07 06:54:43,522 - freqtrade.data.dataprovider - INFO - Loading data for ARB/USDT:USDT 1h from 2023-10-27 20:00:00 to 2024-02-03 00:00:00
+2024-02-07 06:54:43,526 - freqtrade.data.history.idatahandler - WARNING - ARB/USDT:USDT, futures, 1h, data starts at 2023-11-09 00:00:00
+2024-02-07 06:54:43,543 - freqtrade.data.dataprovider - INFO - Loading data for INJ/USDT:USDT 1h from 2023-10-27 20:00:00 to 2024-02-03 00:00:00
+2024-02-07 06:54:43,548 - freqtrade.data.history.idatahandler - WARNING - INJ/USDT:USDT, futures, 1h, data starts at 2023-11-09 00:00:00
+2024-02-07 06:54:43,565 - freqtrade.data.dataprovider - INFO - Loading data for UMA/USDT:USDT 1h from 2023-10-27 20:00:00 to 2024-02-03 00:00:00
+2024-02-07 06:54:43,569 - freqtrade.data.history.idatahandler - WARNING - UMA/USDT:USDT, futures, 1h, data starts at 2023-11-09 00:00:00
+2024-02-07 06:54:43,585 - freqtrade.data.dataprovider - INFO - Loading data for CFX/USDT:USDT 1h from 2023-10-27 20:00:00 to 2024-02-03 00:00:00
+2024-02-07 06:54:43,589 - freqtrade.data.history.idatahandler - WARNING - CFX/USDT:USDT, futures, 1h, data starts at 2023-11-09 00:00:00
+2024-02-07 06:54:43,606 - freqtrade.data.dataprovider - INFO - Loading data for API3/USDT:USDT 1h from 2023-10-27 20:00:00 to 2024-02-03 00:00:00
+2024-02-07 06:54:43,611 - freqtrade.data.history.idatahandler - WARNING - API3/USDT:USDT, futures, 1h, data starts at 2023-11-09 00:00:00
+2024-02-07 06:54:43,628 - freqtrade.data.dataprovider - INFO - Loading data for NEO/USDT:USDT 1h from 2023-10-27 20:00:00 to 2024-02-03 00:00:00
+====================== WEEK BREAKDOWN ======================
+|   Week |   Tot Profit USDT |   Wins |   Draws |   Losses |
+|--------+-------------------+--------+---------+----------|
+====================== MONTH BREAKDOWN ======================
+|   Month |   Tot Profit USDT |   Wins |   Draws |   Losses |
+|---------+-------------------+--------+---------+----------|
+================================= SUMMARY METRICS =================================
+No trades made. Your starting balance was 10000 USDT, and your stake was 0.05 USDT.
+===================================================================================
+
+Backtested 2023-11-09 08:20:00 -> 2024-02-03 00:00:00 | Max open trades : 3
+===================================================================== STRATEGY SUMMARY =====================================================================
+|   Strategy |   Entries |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |      Drawdown |
+|------------+-----------+----------------+----------------+-------------------+----------------+----------------+-------------------------+---------------|
+|       ecV1 |         0 |           0.00 |           0.00 |                 0 |           0.00 |           0:00 |     0     0     0     0 | 0 USDT  0.00% |
+============================================================================================================================================================
+
+For more details, please look at the detail tables above
