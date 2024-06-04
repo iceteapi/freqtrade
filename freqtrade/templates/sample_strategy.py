@@ -105,7 +105,11 @@ class SampleStrategy(IStrategy):
             },
             "RSI": {
                 'rsi': {'color': 'red'},
+            },
+              "CCI": {
+                'cci': {'color': 'green'},
             }
+        }
         }
     }
 
@@ -268,6 +272,9 @@ class SampleStrategy(IStrategy):
 
         # TEMA - Triple Exponential Moving Average
         dataframe['tema'] = ta.TEMA(dataframe, timeperiod=9)
+
+        # TEMA - Triple Exponential Moving Average
+        dataframe['CCI'] = ta.CCI(dataframe, timeperiod=20)
 
         # Cycle Indicator
         # ------------------------------------

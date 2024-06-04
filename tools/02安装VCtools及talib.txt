@@ -1,0 +1,13 @@
+REM 安装WINDOWS Visual C++ build tools
+REM https://visualstudio.microsoft.com/zh-hans/visual-cpp-build-tools/
+REM 下载后直接安装
+REM 以管理员运行powershell
+REM Get-ExecutionPolicy
+REM Set-ExecutionPolicy RemoteSigned
+REM 到freqtrade目录运行 .venv\scripts\activate.ps1 
+REM pip install --find-links build_helpers\ TA-Lib -U
+REM pip install -r requirements.txt
+REM pip install -e .
+
+REM 或者以管理员权限执行 powershell.exe -ExecutionPolicy Bypass -File build_helpers\install_windows.ps1
+

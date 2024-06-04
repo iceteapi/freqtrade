@@ -1,0 +1,3 @@
+[submodule "bladetrade"]
+	path = bladetrade
+	url = https://github.com/iceteapi/bladetrade.git
